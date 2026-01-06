@@ -110,6 +110,116 @@
         /* MENU PREVIEW */
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 3rem; }
         .menu-item { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        
+        /* --- MENU CARD CONTAINER --- */
+        .menu-card {
+            background-color: var(--fresh-white);
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-top: 8px solid var(--zesty-green);
+            border-bottom: 8px solid var(--spice-orange);
+        }
+
+        /* --- HEADER --- */
+        .menu-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(to bottom, #ffffff, #f8fdf8);
+            border-bottom: 2px dashed #ddeedd;
+        }
+        .menu-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: var(--deep-green);
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .menu-header span { color: var(--zesty-green); }
+        .menu-header p {
+            color: var(--spice-orange);
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* --- SECTIONS & LISTS --- */
+        .menu-section {
+            padding: 1.5rem;
+        }
+
+        h3.section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--deep-green);
+            text-transform: uppercase;
+            border-left: 5px solid var(--zesty-green);
+            padding-left: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h4.subsection-title {
+             font-family: 'Montserrat', sans-serif;
+             font-weight: 700;
+             color: var(--zesty-green);
+             margin-bottom: 10px;
+             margin-top: 20px;
+        }
+
+        ul.menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li.menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            border-bottom: 1px dotted #eee;
+            padding-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .item-price {
+            color: var(--spice-orange);
+            font-weight: 800;
+        }
+
+        /* --- CURRY PRICING BANNER --- */
+        .curry-pricing-banner {
+            background-color: var(--spice-orange);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+        }
+        .curry-pricing-banner .size { font-weight: 400; font-size: 0.9rem; text-transform: uppercase;}
+        .curry-pricing-banner .cost { font-size: 1.3rem; font-weight: 900;}
+        .curry-divider { color: rgba(255,255,255,0.6); margin: 0 10px;}
+
+        .dietary-tags { font-size: 0.8rem; margin-bottom: 10px; }
+        .tag-v { color: #4CAF50; font-weight: bold; } /* Vegetarian */
+        .tag-vg { color: #8BC34A; font-weight: bold; } /* Vegan */
+        .tag-spicy { color: var(--heat-red); font-weight: bold; }
+        
+        /* --- FOOTER DECORATION --- */
+        .menu-footer-deco {
+            text-align: center;
+            padding: 10px;
+            color: var(--zesty-green);
+            font-size: 1.5rem;
+        }
 
         footer { background: var(--deep-green); color: white; padding: 3rem; text-align: center; }
     </style>
@@ -134,17 +244,75 @@
 </section>
 
 <section class="section" id="menu">
-    <h2>Popular on the Straßen</h2>
-    <div class="menu-grid">
-        <div class="menu-item">
-            <h3>Paneer Tikka Roll</h3>
-            <p>Grilled paneer with green chutney & onions in a handmade paratha.</p>
-            <strong>€8.50</strong>
-        </div>
-        <div class="menu-item">
-            <h3>Berlin Chana Masala</h3>
-            <p>Spicy chickpeas served with a fluffy bhatura. A Berlin favorite.</p>
-            <strong>€9.00</strong>
+    <h2>Menu</h2>
+    <div class="menu-card">
+        <header class="menu-header">
+            <h2>Hari <span>Mirchi</span></h2>
+            <p>Berlin Street Food Menu</p>
+        </header>
+
+        <section class="menu-section">
+            <h3 class="section-title">Street Snacks 🌶️</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span>Chicken Pakora</span>
+                    <span class="item-price">5.50 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Paneer Pakora</span>
+                    <span class="item-price">6.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Veg Pakora</span>
+                    <span class="item-price">5.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Samosa (2pcs)</span>
+                    <span class="item-price">6.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Samosa Chat</span>
+                    <span class="item-price">7.00 €</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="menu-section" style="background-color: #fafdfa;">
+            <h3 class="section-title">Curry Boxes 🍛</h3>
+            
+            <div class="curry-pricing-banner">
+                <span class="size">Small Box</span> <span class="cost">8€</span>
+                <span class="curry-divider">|</span>
+                <span class="size">Large Box</span> <span class="cost">9€</span>
+            </div>
+
+            <h4 class="subsection-title">Chicken Based</h4>
+            <ul class="menu-list">
+                <li class="menu-item">Chicken Curry</li>
+                <li class="menu-item">Butter Chicken</li>
+                <li class="menu-item">Chicken Mango</li>
+                <li class="menu-item">Chicken Jalfreji</li>
+            </ul>
+
+            <h4 class="subsection-title">Lamb Based (Lamm)</h4>
+            <ul class="menu-list">
+                <li class="menu-item">Lamm Curry</li>
+                <li class="menu-item">Lamm Madras 🌶️</li>
+                <li class="menu-item">Lamm Tikka Masala</li>
+            </ul>
+
+            <h4 class="subsection-title">Vegetarian</h4>
+            <ul class="menu-list">
+                <li class="menu-item">Chana Masala</li>
+                <li class="menu-item">Sabji Mix</li>
+                <li class="menu-item">Palak Paneer</li>
+                <li class="menu-item">Shaahi Paneer</li>
+                <li class="menu-item">Paneer Jhalfrezi</li>
+            </ul>
+        </section>
+
+        <div class="menu-footer-deco">
+            🔥 🔥 🔥
         </div>
     </div>
 </section>
