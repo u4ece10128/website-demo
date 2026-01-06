@@ -10,7 +10,8 @@
             --zesty-green: #4CAF50; 
             --deep-green: #1B5E20;  
             --fresh-white: #ffffff;
-            --heat-red: #D32F2F;    
+            /* CHANGED: A new, lighter spice color for the banner */
+            --light-spice: #FF6B35;    
             --light-bg: #F1F8E9;    
         }
 
@@ -30,15 +31,16 @@
             letter-spacing: 1px;
         }
 
-        /* LIVE LOCATION BANNER */
+        /* LIVE LOCATION BANNER - UPDATED COLOR */
         .location-banner {
-            background: var(--heat-red);
+            background: var(--light-spice); /* Now using the lighter orange */
             color: white;
             text-align: center;
             padding: 12px;
             font-weight: bold;
             font-size: 0.9rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* HEADER */
@@ -61,7 +63,8 @@
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(27, 94, 32, 0.6), rgba(27, 94, 32, 0.8)), url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1350&q=80') center/cover;
+            /* Using a slightly brighter hero image to match the lighter vibe */
+            background: linear-gradient(rgba(27, 94, 32, 0.5), rgba(27, 94, 32, 0.7)), url('https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=1350&q=80') center/cover;
             height: 70vh;
             display: flex;
             align-items: center;
@@ -76,21 +79,27 @@
             font-size: 3.5rem;
             margin-bottom: 0;
             line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
         }
         
-        /* THE NEW TAGLINE STYLING */
+        /* THE MAIN TAGLINE */
         .main-tagline {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--zesty-green);
-            margin-top: 10px;
+            font-weight: 500;
+            color: var(--zesty-green); /* The green pops against the darker background */
+            margin-top: 15px;
             text-transform: none;
+            background: rgba(255,255,255,0.9); /* Added a light backing for readability */
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .btn-spicy {
-            background: var(--zesty-green);
-            color: var(--deep-green);
+            background: var(--light-spice); /* Matching button to the new banner color */
+            color: white;
             padding: 15px 35px;
             text-decoration: none;
             border-radius: 50px;
@@ -99,25 +108,31 @@
             transition: all 0.3s ease;
             display: inline-block;
             margin-top: 30px;
+            border: none;
         }
         .btn-spicy:hover {
-            background: var(--fresh-white);
-            transform: scale(1.05);
+            background: var(--zesty-green);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
         }
 
         .section { padding: 4rem 10%; text-align: center; background: var(--fresh-white); }
 
         /* MENU PREVIEW */
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 3rem; }
-        .menu-item { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .menu-item { background: #fff; border: 1px solid #eee; border-top: 4px solid var(--zesty-green); border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+        .menu-item h3 { margin-top: 0; color: var(--deep-green); }
+        .menu-item strong { color: var(--light-spice); font-size: 1.2rem; float: right;}
 
         footer { background: var(--deep-green); color: white; padding: 3rem; text-align: center; }
+        footer a { color: var(--zesty-green); text-decoration: none;}
     </style>
 </head>
 <body>
 
 <div class="location-banner">
-    📍 HEUTE IN BERLIN: Nider-Schöneweide, Opposite: Zentrum (12:00 - 22:00)
+    📍 HEUTE IN BERLIN: RAW-Gelände, Friedrichshain (12:00 - 20:00)
 </div>
 
 <header>
@@ -128,7 +143,8 @@
 <section class="hero">
     <div class="hero-content">
         <h2>HARI MIRCHI</h2>
-        <p class="main-tagline">The great Indian street food to Berlin Straßen</p>
+        <div class="main-tagline">The great Indian street food to Berlin Straßen</div>
+        <br>
         <a href="#menu" class="btn-spicy">View Menu / Speisekarte</a>
     </div>
 </section>
@@ -137,21 +153,26 @@
     <h2>Popular on the Straßen</h2>
     <div class="menu-grid">
         <div class="menu-item">
-            <h3>Paneer Tikka Roll</h3>
-            <p>Grilled paneer with green chutney & onions in a handmade paratha.</p>
             <strong>€8.50</strong>
+            <h3>Paneer Tikka Roll</h3>
+            <p>Grilled paneer with green chutney & fresh onions in a handmade paratha.</p>
         </div>
         <div class="menu-item">
-            <h3>Berlin Chana Masala</h3>
-            <p>Spicy chickpeas served with a fluffy bhatura. A Berlin favorite.</p>
             <strong>€9.00</strong>
+            <h3>Berlin Chana Bowl</h3>
+            <p>Spicy chickpeas served over turmeric rice with a fresh cucumber salad.</p>
+        </div>
+        <div class="menu-item">
+            <strong>€5.00</strong>
+            <h3>Mirchi Pakoras</h3>
+            <p>Crispy fried green chillies stuffed with masala. A spicy Berlin snack.</p>
         </div>
     </div>
 </section>
 
 <footer>
     <p>Follow our journey through the Straßen of Berlin!</p>
-    <p>Instagram: @HariMirchiBerlin</p>
+    <p>📸 Instagram: <a href="#">@HariMirchiBerlin</a></p>
 </footer>
 
 </body>
