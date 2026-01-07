@@ -1,0 +1,233 @@
+:root {
+    --zesty-green: #4CAF50; 
+    --deep-green: #1B5E20;  
+    --fresh-white: #ffffff;
+    --heat-red: #D32F2F;    
+    --light-bg: #F1F8E9;   
+    --spice-orange: #FF6B35; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--deep-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LIVE LOCATION BANNER */
+.location-banner {
+    background: var(--heat-red);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+header {
+    background: var(--deep-green);
+    color: var(--fresh-white);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 5px solid var(--zesty-green);
+}
+header h1 { margin: 0; color: var(--fresh-white); font-size: 2.8rem; line-height: 1; }
+header span { color: var(--zesty-green); }
+.tagline-sub { 
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: #C8E6C9; 
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(27, 94, 32, 0.6), rgba(27, 94, 32, 0.8)), url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1350&q=80') center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fresh-white);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    color: var(--fresh-white);
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+/* THE NEW TAGLINE STYLING */
+.main-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--zesty-green);
+    margin-top: 10px;
+    text-transform: none;
+}
+
+.btn-spicy {
+    background: var(--zesty-green);
+    color: var(--deep-green);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+.btn-spicy:hover {
+    background: var(--fresh-white);
+    transform: scale(1.05);
+}
+
+.section { padding: 4rem 10%; text-align: center; background: var(--fresh-white); }
+
+/* MENU PREVIEW */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 3rem; }
+.menu-item { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* --- MENU CARD CONTAINER --- */
+.menu-card {
+    background-color: var(--fresh-white);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-top: 8px solid var(--zesty-green);
+    border-bottom: 8px solid var(--spice-orange);
+}
+
+/* --- HEADER --- */
+.menu-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom, #ffffff, #f8fdf8);
+    border-bottom: 2px dashed #ddeedd;
+}
+.menu-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--deep-green);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+.menu-header span { color: var(--zesty-green); }
+.menu-header p {
+    color: var(--spice-orange);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* --- SECTIONS & LISTS --- */
+.menu-section {
+    padding: 1.5rem;
+}
+
+h3.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--deep-green);
+    text-transform: uppercase;
+    border-left: 5px solid var(--zesty-green);
+    padding-left: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+h4.subsection-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: var(--zesty-green);
+        margin-bottom: 10px;
+        margin-top: 20px;
+}
+
+ul.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px dotted #eee;
+    padding-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.item-price {
+    color: var(--spice-orange);
+    font-weight: 800;
+}
+
+/* --- CURRY PRICING BANNER --- */
+.curry-pricing-banner {
+    background-color: var(--spice-orange);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+}
+.curry-pricing-banner .size { font-weight: 400; font-size: 0.9rem; text-transform: uppercase;}
+.curry-pricing-banner .cost { font-size: 1.3rem; font-weight: 900;}
+.curry-divider { color: rgba(255,255,255,0.6); margin: 0 10px;}
+
+.dietary-tags { font-size: 0.8rem; margin-bottom: 10px; }
+.tag-v { color: #4CAF50; font-weight: bold; } /* Vegetarian */
+.tag-vg { color: #8BC34A; font-weight: bold; } /* Vegan */
+.tag-spicy { color: var(--heat-red); font-weight: bold; }
+
+/* Flexbox Container for Subsections */
+.curry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.curry-column {
+    flex: 1;
+    min-width: 250px; /* Forces stack on mobile */
+}
+
+/* --- FOOTER DECORATION --- */
+.menu-footer-deco {
+    text-align: center;
+    padding: 10px;
+    color: var(--zesty-green);
+    font-size: 1.5rem;
+}
+
+footer { background: var(--deep-green); color: white; padding: 3rem; text-align: center; }
