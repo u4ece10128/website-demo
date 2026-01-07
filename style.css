@@ -105,122 +105,107 @@ header span { color: var(--zesty-green); }
 .menu-item { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
 /* --- MENU CARD CONTAINER --- */
-.menu-card {
-    background-color: var(--fresh-white);
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    overflow: hidden;
-    border-top: 8px solid var(--zesty-green);
-    border-bottom: 8px solid var(--spice-orange);
-}
-
-/* --- HEADER --- */
-.menu-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(to bottom, #ffffff, #f8fdf8);
-    border-bottom: 2px dashed #ddeedd;
-}
-.menu-header h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    color: var(--deep-green);
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 2.2rem;
-    line-height: 1;
-}
-.menu-header span { color: var(--zesty-green); }
-.menu-header p {
-    color: var(--spice-orange);
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-/* --- SECTIONS & LISTS --- */
 .menu-section {
-    padding: 1.5rem;
+    background-color: #fafdfa;
+    border-radius: 15px;
+    padding: 25px; /* Equal padding for both ensures perfect alignment */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    box-sizing: border-box; /* Crucial for alignment */
 }
 
-h3.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    color: var(--deep-green);
-    text-transform: uppercase;
-    border-left: 5px solid var(--zesty-green);
-    padding-left: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+.menu-card {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start; /* Keeps tops aligned */
+        justify-content: center;
+        flex-wrap: wrap; /* Allows stacking on small screens */
+    }
+
+/* Give the Curry section more space than the Snacks */
+.menu-card .menu-section:first-child {
+    flex: 1; /* Street Snacks */
+    min-width: 300px;
 }
 
-h4.subsection-title {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        color: var(--zesty-green);
-        margin-bottom: 10px;
-        margin-top: 20px;
+.menu-card .menu-section:last-child {
+    flex: 2; /* Curry Boxes */
+    min-width: 500px; /* Ensures the 3 columns inside don't squash too much */
 }
 
-ul.menu-list {
+.menu-section h3, .menu-section h4 {
+    margin-top: 0; 
+}
+/* Basic styling for the menu lists */
+.menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-li.menu-item {
+.menu-item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 12px;
-    border-bottom: 1px dotted #eee;
-    padding-bottom: 5px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     font-weight: 600;
-    color: #444;
 }
 
-.item-price {
-    color: var(--spice-orange);
-    font-weight: 800;
-}
-
-/* --- CURRY PRICING BANNER --- */
-.curry-pricing-banner {
-    background-color: var(--spice-orange);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
+.section-title {
+    font-size: 1.8rem;
+    color: var(--deep-green);
     margin-bottom: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    border-bottom: 3px solid var(--zesty-green);
+    display: inline-block;
+    padding-bottom: 5px;
 }
-.curry-pricing-banner .size { font-weight: 400; font-size: 0.9rem; text-transform: uppercase;}
-.curry-pricing-banner .cost { font-size: 1.3rem; font-weight: 900;}
-.curry-divider { color: rgba(255,255,255,0.6); margin: 0 10px;}
+
+/* Curry Grid internal styling */
+.curry-grid {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+}
+
+.curry-column {
+    flex: 1;
+}
+
+.subsection-title {
+    font-size: 1rem;
+    color: var(--heat-red);
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.curry-pricing-banner {
+    background: var(--zesty-green);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Responsive: Stack sections on mobile */
+@media (max-width: 900px) {
+    .menu-card {
+        flex-direction: column;
+    }
+    .menu-card .menu-section {
+        width: 100%;
+    }
+    .curry-grid {
+        flex-direction: column;
+    }
+}
 
 .dietary-tags { font-size: 0.8rem; margin-bottom: 10px; }
 .tag-v { color: #4CAF50; font-weight: bold; } /* Vegetarian */
 .tag-vg { color: #8BC34A; font-weight: bold; } /* Vegan */
 .tag-spicy { color: var(--heat-red); font-weight: bold; }
 
-/* Flexbox Container for Subsections */
-.curry-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    text-align: left;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.curry-column {
-    flex: 1;
-    min-width: 250px; /* Forces stack on mobile */
-}
 
 /* --- FOOTER DECORATION --- */
 .menu-footer-deco {
