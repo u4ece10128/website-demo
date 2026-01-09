@@ -54,7 +54,7 @@ header span { color: var(--zesty-green); }
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(27, 94, 32, 0.6), rgba(27, 94, 32, 0.8)), url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1350&q=80') center/cover;
+    background: none; /* replace it with right image*/
     height: 70vh;
     display: flex;
     align-items: center;
@@ -65,12 +65,17 @@ header span { color: var(--zesty-green); }
 }
 
 .hero-content h2 {
-    color: var(--fresh-white);
+    color: #000000;            /* Black letters */
+    background-color: #ffffff; /* White background */
     font-size: 3.5rem;
     margin-bottom: 0;
     line-height: 1.1;
+    
+    /* These additions make it look professional */
+    display: inline-block;     /* Wraps the white background tightly around the text */
+    padding: 10px 30px;        /* Adds space inside the white box */
+    text-transform: uppercase;
 }
-
 /* THE NEW TAGLINE STYLING */
 .main-tagline {
     font-family: 'Montserrat', sans-serif;
@@ -181,11 +186,15 @@ header span { color: var(--zesty-green); }
 .curry-pricing-banner {
     background: var(--zesty-green);
     color: white;
-    padding: 8px 20px;
+    padding: 8px 25px;
     border-radius: 50px;
     font-weight: bold;
-    margin-bottom: 20px;
-    display: inline-block;
+    display: inline-block; /* Keeps it centered but only as wide as the text */
+
+    margin: 0 auto 25px auto; /* Centers it and adds space below it */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Responsive: Stack sections on mobile */
