@@ -157,7 +157,7 @@ header span { color: var(--zesty-green); }
 .menu-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px; 
     border-bottom: 1px solid rgba(0,0,0,0.05);
     font-weight: 600;
 }
@@ -185,7 +185,7 @@ header span { color: var(--zesty-green); }
 .subsection-title {
     font-size: 1rem;
     color: var(--heat-red);
-    margin: 15px 0 10px 0;
+    margin: 15px 0 10px 10px;
     text-transform: uppercase;
 }
 
@@ -195,7 +195,6 @@ header span { color: var(--zesty-green); }
     padding: 8px 25px;
     border-radius: 50px;
     font-weight: bold;
-    display: inline-block; /* Keeps it centered but only as wide as the text */
 
     margin: 0 auto 25px auto; /* Centers it and adds space below it */
     font-size: 0.9rem;
