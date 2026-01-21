@@ -3,74 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Bites | Best Tacos in Town</title>
-    <style>
-        :root {
-            --primary: #ff4500; /* Vibrant Orange/Red */
-            --dark: #1a1a1a;
-            --light: #f4f4f4;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        header { background: var(--dark); color: white; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 100; }
-        .hero { background: url('https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1350&q=80') center/cover; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero-content { background: rgba(0,0,0,0.6); padding: 2rem; border-radius: 10px; }
-        .section { padding: 3rem 10%; text-align: center; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2rem; }
-        .menu-item { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; transition: transform 0.3s; }
-        .menu-item:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .btn { background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .schedule-table { width: 100%; max-width: 600px; margin: auto; border-collapse: collapse; }
-        .schedule-table td { padding: 10px; border-bottom: 1px solid #ddd; }
-        footer { background: #222; color: white; text-align: center; padding: 2rem; }
-    </style>
+    <title>Green Mirchi | Indian Street Food Berlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="location-banner">
+    📍 HEUTE IN BERLIN: Nider-Schöneweide, Opposite: Zentrum (12:00 - 22:00)
+</div>
+
 <header>
-    <h1>STREET BITES</h1>
+    <h1>Green <span>MIRCHI</span></h1>
+    <div class="tagline-sub">INDIAN STREET FOOD</div>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h2>Fresh. Fast. Famous.</h2>
-        <p>Catch us on the streets of Downtown daily!</p>
-        <a href="#menu" class="btn">View Menu</a>
+        <a href="#menu" class="btn-spicy">View Menu</a>
     </div>
 </section>
 
-<section class="section" id="schedule">
-    <h2>🚚 Where Are We?</h2>
-    <table class="schedule-table">
-        <tr><td><strong>Monday</strong></td><td>Main St. Park (11am - 2pm)</td></tr>
-        <tr><td><strong>Wednesday</strong></td><td>The Brewery Lot (5pm - 9pm)</td></tr>
-        <tr><td><strong>Friday</strong></td><td>Farmers Market (9am - 1pm)</td></tr>
-    </table>
-</section>
+<section class="section" id="menu">
+    <h2>Menu</h2>
+    <div class="menu-card">
+        <section class="menu-section">
+            <h3 class="section-title">Street Snacks 🌶️</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span>Chicken Pakora</span>
+                    <span class="item-price">5.50 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Paneer Pakora</span>
+                    <span class="item-price">6.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Veg Pakora</span>
+                    <span class="item-price">5.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Samosa (2pcs)</span>
+                    <span class="item-price">6.00 €</span>
+                </li>
+                <li class="menu-item">
+                    <span>Samosa Chat</span>
+                    <span class="item-price">7.00 €</span>
+                </li>
+            </ul>
+        </section>
 
-<section class="section" id="menu" style="background: #fff;">
-    <h2>🔥 Top Sellers</h2>
-    <div class="menu-grid">
-        <div class="menu-item">
-            <h3>Spicy Fusion Taco</h3>
-            <p>Slow-roasted pork with pineapple salsa and lime crema.</p>
-            <strong>$12.00</strong>
-        </div>
-        <div class="menu-item">
-            <h3>The Loaded Box</h3>
-            <p>Hand-cut fries topped with kimchi and secret sauce.</p>
-            <strong>$10.00</strong>
-        </div>
-        <div class="menu-item">
-            <h3>Avocado Smash</h3>
-            <p>Fresh avocado on toasted sourdough with chili flakes.</p>
-            <strong>$9.00</strong>
+        <section class="menu-section" style="background-color: #fafdfa; border-radius: 15px; padding: 20px;">
+            <h3 class="section-title">Curry Boxes 🍛</h3>
+            
+            <div class="curry-pricing-banner">
+                <span class="size">Small Box</span> <span class="cost">8€</span>
+                <span class="curry-divider">|</span>
+                <span class="size">Large Box</span> <span class="cost">9€</span>
+            </div>
+
+            <div class="curry-grid">
+                <div class="curry-column">
+                    <h4 class="subsection-title">Chicken</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item">Chicken Curry</li>
+                        <li class="menu-item">Butter Chicken</li>
+                        <li class="menu-item">Chicken Mango</li>
+                        <li class="menu-item">Chicken Jalfreji</li>
+                    </ul>
+                </div>
+
+                <div class="curry-column">
+                    <h4 class="subsection-title">Lamb (Lamm)</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item">Lamm Curry</li>
+                        <li class="menu-item">Lamm Madras 🌶️</li>
+                        <li class="menu-item">Lamm Tikka Masala</li>
+                    </ul>
+                </div>
+
+                <div class="curry-column">
+                    <h4 class="subsection-title">Vegetarian</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item">Chana Masala</li>
+                        <li class="menu-item">Sabji Mix</li>
+                        <li class="menu-item">Palak Paneer</li>
+                        <li class="menu-item">Shaahi Paneer</li>
+                        <li class="menu-item">Paneer Jhalfrezi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+        <div class="menu-footer-deco">
+            🔥 🔥 🔥
         </div>
     </div>
 </section>
 
 <footer>
-    <p>Follow us for daily location updates!</p>
-    <p>Instagram: @StreetBitesTruck | Phone: (555) 123-4567</p>
+    <p>Follow our journey through the Straßen of Berlin!</p>
+    <p>Instagram: @GreenMirchiBerlin</p>
 </footer>
 
 </body>

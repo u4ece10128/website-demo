@@ -1,0 +1,232 @@
+:root {
+    --zesty-green: #4CAF50; 
+    --deep-green: #1B5E20;  
+    --fresh-white: #ffffff;
+    --heat-red: #D32F2F;    
+    --light-bg: #F1F8E9;   
+    --spice-orange: #FF6B35; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--deep-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LIVE LOCATION BANNER */
+.location-banner {
+    background: var(--heat-red);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+header {
+    background: var(--deep-green);
+    color: var(--fresh-white);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 5px solid var(--zesty-green);
+}
+header h1 { margin: 0; color: var(--fresh-white); font-size: 2.8rem; line-height: 1; }
+header span { color: var(--zesty-green); }
+.tagline-sub { 
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: #C8E6C9; 
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/* HERO SECTION */
+.hero {
+    /* White Gradient + Working Samosa Photo */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%), 
+                url('https://images.pexels.com/photos/4449068/pexels-photo-4449068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center;
+    
+    /* Zoomed in 140% to focus on textures and straight angle position */
+    background-size: 140%; 
+
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    color: #000000;            /* Black letters */
+    background-color: #ffffff; /* White background */
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    line-height: 1.1;
+    
+    /* These additions make it look professional */
+    display: inline-block;     /* Wraps the white background tightly around the text */
+    padding: 10px 30px;        /* Adds space inside the white box */
+    text-transform: uppercase;
+}
+/* THE NEW TAGLINE STYLING */
+.main-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--zesty-green);
+    margin-top: 10px;
+    text-transform: none;
+}
+
+.btn-spicy {
+    background: var(--zesty-green);
+    color: var(--deep-green);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+.btn-spicy:hover {
+    background: var(--fresh-white);
+    transform: scale(1.05);
+}
+
+.section { padding: 4rem 10%; text-align: center; background: var(--fresh-white); }
+
+/* MENU PREVIEW */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 3rem; }
+.menu-item { background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* --- MENU CARD CONTAINER --- */
+.menu-section {
+    background-color: #fafdfa;
+    border-radius: 15px;
+    padding: 25px; /* Equal padding for both ensures perfect alignment */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    box-sizing: border-box; /* Crucial for alignment */
+}
+
+.menu-card {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start; /* Keeps tops aligned */
+        justify-content: center;
+        flex-wrap: wrap; /* Allows stacking on small screens */
+    }
+
+/* Give the Curry section more space than the Snacks */
+.menu-card .menu-section:first-child {
+    flex: 1; /* Street Snacks */
+    min-width: 300px;
+}
+
+.menu-card .menu-section:last-child {
+    flex: 2; /* Curry Boxes */
+    min-width: 500px; /* Ensures the 3 columns inside don't squash too much */
+}
+
+.menu-section h3, .menu-section h4 {
+    margin-top: 0; 
+}
+/* Basic styling for the menu lists */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; 
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--deep-green);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--zesty-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Curry Grid internal styling */
+.curry-grid {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+}
+
+.curry-column {
+    flex: 1;
+}
+
+.subsection-title {
+    font-size: 1rem;
+    color: var(--heat-red);
+    margin: 15px 0 10px 10px;
+    text-transform: uppercase;
+}
+
+.curry-pricing-banner {
+    background: var(--zesty-green);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+
+    margin: 0 auto 25px auto; /* Centers it and adds space below it */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive: Stack sections on mobile */
+@media (max-width: 900px) {
+    .menu-card {
+        flex-direction: column;
+    }
+    .menu-card .menu-section {
+        width: 100%;
+    }
+    .curry-grid {
+        flex-direction: column;
+    }
+}
+
+.dietary-tags { font-size: 0.8rem; margin-bottom: 10px; }
+.tag-v { color: #4CAF50; font-weight: bold; } /* Vegetarian */
+.tag-vg { color: #8BC34A; font-weight: bold; } /* Vegan */
+.tag-spicy { color: var(--heat-red); font-weight: bold; }
+
+
+/* --- FOOTER DECORATION --- */
+.menu-footer-deco {
+    text-align: center;
+    padding: 10px;
+    color: var(--zesty-green);
+    font-size: 1.5rem;
+}
+
+footer { background: var(--deep-green); color: white; padding: 3rem; text-align: center; }
