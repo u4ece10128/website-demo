@@ -287,3 +287,77 @@ header span { color: var(--zesty-green); }
 }
 
 footer { background: var(--deep-green); color: white; padding: 3rem; text-align: center; }
+
+/* Section Container */
+.events-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background to contrast with white cards */
+    text-align: center;
+}
+
+.section-title {
+    color: var(--deep-green);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.event-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-content h3 {
+    color: var(--deep-green);
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--zesty-green);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Tags Styles */
+.event-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tag-event { background: #e3f2fd; color: #1976d2; }
+.tag-celebration { background: #fff3e0; color: #f57c00; }
+.tag-offer { background: #e8f5e9; color: var(--deep-green); }
