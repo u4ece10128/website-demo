@@ -16,11 +16,21 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+    /* Kurale has a beautiful Indic-calligraphy feel */
+    font-family: 'Kurale', serif; 
+    font-weight: 400; /* Kurale looks best at regular weight */
     color: var(--deep-green);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-transform: none; /* Let the font's natural curves show */
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+/* Optional: Add a spicy accent to your H1 or specific words */
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--royal-gold);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 /* LIVE LOCATION BANNER */
